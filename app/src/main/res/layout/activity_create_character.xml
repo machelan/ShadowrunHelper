@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateCharacterActivity">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="hideKeyboard"
+                android:text="@string/textName"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/nameHint"
+                android:inputType="text"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/textMetatype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="hideKeyboard"
+                android:text="@string/textMetatype"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/metatype"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/metatypeHint"
+                android:inputType="text"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/textNationality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="hideKeyboard"
+                android:text="@string/textNationality"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/nationality"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/nationalityHint"
+                android:inputType="text"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/textGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="hideKeyboard"
+                android:text="@string/textGender"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Spinner
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/btn_dropdown"
+                android:entries="@array/gender_arrays"
+                android:spinnerMode="dropdown"/>
+
+            <TextView
+                android:id="@+id/textAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="hideKeyboard"
+                android:text="@string/textAge"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/age"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/ageHint"
+                android:inputType="text"
+                android:padding="10dp" />
+
+            <Button
+                android:id="@+id/saveButton"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:background="@color/colorPrimaryDark"
+                android:elevation="0dp"
+                android:shadowRadius="15"
+                android:text="@string/saveButtonText"
+                android:textAllCaps="false"
+                android:textColor="@android:color/background_light"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

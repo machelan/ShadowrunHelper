@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Shadowrun Helper</string>
+    <string name="CreateButtonText">Create a new character</string>
+    <string name="LoadButtonText">Load an existed character</string>
+    <string name="textName">Name</string>
+    <string name="nameHint">John Ambers</string>
+    <string name="textMetatype">Metatype</string>
+    <string name="metatypeHint">Dwarf</string>
+    <string name="textNationality">Nationality</string>
+    <string name="nationalityHint">Japanese</string>
+    <string name="textGender">Gender</string>
+    <string name="textAge">Age</string>
+    <string name="ageHint">29</string>
+    <string name="saveButtonText">save</string>
+
+    <string-array name="gender_arrays">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+</resources>

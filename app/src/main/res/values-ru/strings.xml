@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Помощник бегущего в тени</string>
+    <string name="CreateButtonText">Создание нового персонажа</string>
+    <string name="LoadButtonText">Загрузка существующего персонажа</string>
+    <string name="textName">Имя</string>
+    <string name="nameHint">Джон Амберс</string>
+    <string name="textMetatype">Метатип</string>
+    <string name="textNationality">Национальность</string>
+    <string name="metatypeHint">Дварф</string>
+    <string name="nationalityHint">Японец</string>
+    <string name="textGender">Пол</string>
+    <string name="textAge">Возраст</string>
+    <string name="ageHint">29</string>
+    <string name="saveButtonText">Сохранить</string>
+
+    <string-array name="gender_arrays">
+        <item>Мужской</item>
+        <item>Женский</item>
+    </string-array>
+</resources>
