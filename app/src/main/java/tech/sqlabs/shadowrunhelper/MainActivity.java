@@ -1,10 +1,17 @@
 package tech.sqlabs.shadowrunhelper;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.f2prateek.rx.preferences2.Preference;
+import com.f2prateek.rx.preferences2.RxSharedPreferences;
+
+import static android.preference.PreferenceManager.getDefaultSharedPreferences;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
@@ -15,6 +22,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         final Button CreateButton = findViewById(R.id.CREATE_BUTTON);
         final Button LoadButton = findViewById(R.id.LOAD_BUTTON);
+
+        SharedPreferences sharedPreferences = getDefaultSharedPreferences(this);
+        RxSharedPreferences rxPreferences = RxSharedPreferences.create(sharedPreferences);
+        Preference<String> token = rxPreferences.getString("token");
+        String oAuthToken = token.get();
+        if (oAuthToken.equals("")) {
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+            finish();
+        } else {
+            Log.i(TAG, "Auth token:");
+            Log.i(TAG, oAuthToken);
+        }
+
         CreateButton.setOnClickListener(v -> {
             Log.d(TAG, "Try to start activity");
             Intent i = new Intent(this, CreateCharacterActivity.class);
