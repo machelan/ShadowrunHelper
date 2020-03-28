@@ -26,7 +26,9 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getDefaultSharedPreferences(this);
         RxSharedPreferences rxPreferences = RxSharedPreferences.create(sharedPreferences);
         Preference<String> token = rxPreferences.getString("token");
+        Preference<String> nick = rxPreferences.getString("nick");
         String oAuthToken = token.get();
+        String nickname = nick.get();
         if (oAuthToken.equals("")) {
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
@@ -34,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
         } else {
             Log.i(TAG, "Auth token:");
             Log.i(TAG, oAuthToken);
+            Log.i(TAG, "Nick:");
+            Log.i(TAG, nickname);
         }
 
         CreateButton.setOnClickListener(v -> {

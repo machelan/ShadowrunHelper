@@ -12,6 +12,8 @@
     <string name="textAge">Age</string>
     <string name="ageHint">29</string>
     <string name="saveButtonText">save</string>
+    <string name="NickText">Nickname</string>
+    <string name="EnterButtonText">Sign In</string>
 
     <string-array name="gender_arrays">
         <item>Male</item>
